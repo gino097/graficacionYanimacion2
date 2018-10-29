@@ -32,7 +32,7 @@
   <input type="text" name="EMAIL">
   <br>
 Provincia:<br>
-  <select name=provincia id="browsers" onchange="cambio_canton()">
+  <select name=provincia id="browsers" onchange="cambia_canton()">
     <option value="1">Azuay
     <option value="2">Bolivar
     <option value="3">Cañar
@@ -185,8 +185,7 @@ var canton_24=new Array("Zamora","Centinela de Cóndor","Chinchipe","El Pangui",
 			<script src="assets/js/main.js"></script>
 
 	</body>
-</html>
-<script>
+	<script>
 	function cambia_canton(){
 var provincia 
    	provincia = document.formC.provincia[document.f1.provincia.selectedIndex].value       
@@ -206,3 +205,5 @@ var provincia
 		document.formC.canton.options[0].selected = true 
 </script>
 }
+</html>
+
