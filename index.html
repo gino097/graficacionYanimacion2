@@ -32,8 +32,7 @@
   <input type="text" name="EMAIL">
   <br>
 Provincia:<br>
-<input list="browsers">
-  <datalist name=provincia id="browsers" onchange="cambio_canton()">
+  <select name=provincia id="browsers" onchange="cambio_canton()">
     <option value="1">Azuay
     <option value="2">Bolivar
     <option value="3">Cañar
@@ -58,7 +57,7 @@ Provincia:<br>
     <option value="22">Sucumbios
     <option value="23">Tungurahua
     <option value="24">Zamora Chinchipe
-  </datalist>
+  </select>
   <br><br>
 <script>
 var canton_1=new Array("Cuenca","Chordeleg","Gualaceo","Paute","Sigsig","Guachapala","El Pan","Sevilla de Oro","San Fernando","Nabón","Santa Isabel","Pucará","Oña","Camilo Ponce Enriquez") 
@@ -103,10 +102,10 @@ var provincia
 		document.formC.canton.options[0].datalist = true 
 </script>
 							Canton:<br>
-<input list="browsers">
-  <datalist name=canton id="browsers">
+
+  <select name=canton id="browsers">
     <option value="-">-
-	    </datalist>
+	    </select>
 		
   <input type="submit" value="Submit">
 </form> 
