@@ -29,7 +29,7 @@
 						<h2>FORMULARIO DE CONTACTO</h2>
 						<form name ="formC" action="/action_page.php">
   E-mail:<br>
-  <input type="text" name="EMAIL">
+  <input type="text" name="email" placeholder="name@xyz.com" required/>
   <br>
 Provincia:<br>
   <select name=provincia onchange="cambia_canton()">
@@ -64,7 +64,9 @@ Provincia:<br>
   <select name=canton>
     <option value="-">-
 	    </select>
+	<textarea name="comentarios" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
 		
+							<br>
   <input type="submit" value="Submit">
 </form> 
 
@@ -156,6 +158,12 @@ Provincia:<br>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		
+<?php
+$mail = $_POST['email']; 
+$comentario = $_POST['comentarios'];
+mail($mail, "COMENTARIO DEL POST", utf8_decode($comentario)); 
+?>
 <script type="text/javascript">
 	var canton_1=new Array("Cuenca","Chordeleg","Gualaceo","Paute","Sigsig","Guachapala","El Pan","Sevilla de Oro","San Fernando","Nabón","Santa Isabel","Pucará","Oña","Camilo Ponce Enriquez");
 var canton_2=new Array("Guaranda","San Miguel de Bolibar","Chimbo","Caluma","Chillanes","Echeandía","Las Naves"); 
