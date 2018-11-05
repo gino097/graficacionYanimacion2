@@ -75,7 +75,7 @@ Provincia:<br>
 						
 						
 <form action="/my-handling-form-page" method="post">
-	<img id="mi_imagen" src="images/foco_apagado.jpg">
+	<img id="mi_imagen" src="foco_apagado.jpg">
 
 <button type="button"
  onClick="cambia()" id="cambia">
@@ -84,9 +84,9 @@ Pulsame!</button>
 function cambia() {
     var image = document.getElementById('mi_imagen')
     if(image.src.match("encendido")) {
-      image.src = "images/foco_apagado.jpg";
+      image.src = 'foco_apagado.jpg';
 	} else {
-        image.src = "images/foco_encendido.jpg";
+        image.src = 'foco_encendido.jpg';
 	}
 }
   </script>
