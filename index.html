@@ -78,8 +78,18 @@ Provincia:<br>
 	<img id="mi_imagen" src="images/foco_apagado.jpg">
 
 <button type="button"
-onclick="document.getElementById('mi_imagen').src = 'images/foco_encendido.jpg'">
+ onClick="cambia()" id="cambia">
 Pulsame!</button>
+    <script language="JavaScript">
+function cambia() {
+    var image = document.getElementById('mi_imagen')
+    if(image.src.match("encendido")) {
+      image.src = "images/foco_apagado.jpg";
+	} else {
+        image.src = "images/foco_encendido.jpg";
+	}
+}
+  </script>
 	</form>
 						
 						
