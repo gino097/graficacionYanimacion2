@@ -75,21 +75,20 @@ Provincia:<br>
 						
 						
 <form action="/my-handling-form-page" method="post">
-	<img id="mi_imagen" src="foco_apagado.jpg">
+	<img id="myImage" onclick="changeImage()" src="foco_apagado.jpg" width="100" height="180">
 
-<button type="button"
- onClick="cambia()" id="cambia">
-Pulsame!</button>
-    <script language="JavaScript">
-function cambia() {
-    var image = document.getElementById('mi_imagen')
-    if(image.src.match("encendido")) {
-      image.src = 'foco_apagado.jpg';
-	} else {
-        image.src = 'foco_encendido.jpg';
-	}
+<p>Click en la bombilla para encenderla/apagarla.</p>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("encendido")) {
+        image.src = "foco_apagado.jpg";
+    } else {
+        image.src = "foco_encendido.jpg";
+    }
 }
-  </script>
+</script>
 	</form>
 						
 						
