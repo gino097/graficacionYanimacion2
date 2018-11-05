@@ -138,6 +138,26 @@ Provincia:<br>
     <line class="linea_horas" x1="125" y1="80" x2="130" y2= "80" style="stroke:black;stroke-width:2; stroke-linecap:round"/>
 
   </svg>
+	<style type="text/css">
+           header{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 1px 30px 1px 30px;
+	background-color:grey;
+}
+
+section{
+	padding: 1px 10px 1px 10px;
+	background-color:grey;
+	font-family: 'Share Tech Mono', monospace;
+    font-size: 3; 
+}
+
+svg{
+  display: block;
+  margin: auto;
+}
+           </style>
     <script>$(function(){
 	function x2(n,i,x1,r) {return x1 + r*Math.sin(2*Math.PI*n/i);};
 	function y2(n,i,y1,r) {return y1 - r*Math.cos(2*Math.PI*n/i);};        
@@ -167,26 +187,7 @@ Provincia:<br>
     setInterval(function(){mostrar_hora();}, 1);
     mostrar_hora();
 })</script>
-	<style type="text/css">
-           header{
-	margin-top: 15px;
-	margin-bottom: 15px;
-	padding: 1px 30px 1px 30px;
-	background-color:grey;
-}
-
-section{
-	padding: 1px 10px 1px 10px;
-	background-color:grey;
-	font-family: 'Share Tech Mono', monospace;
-    font-size: 0.3em; 
-}
-
-svg{
-  display: block;
-  margin: auto;
-}
-           </style>
+	
  
 </section>
 							</form>
