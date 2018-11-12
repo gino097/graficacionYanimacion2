@@ -14,9 +14,7 @@
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
 
-<?php 
-print (“<h2>Hola mundo! Esto lo escribió el intérprete de PHP</h2>”);
-?>
+
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -24,9 +22,6 @@ print (“<h2>Hola mundo! Esto lo escribió el intérprete de PHP</h2>”);
 
 </head>
 <body>
-	<?php 
-print (“<h2>Hola mundo! Esto lo escribió el intérprete de PHP</h2>”);
-?>
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -96,7 +91,7 @@ print (“<h2>Hola mundo! Esto lo escribió el intérprete de PHP</h2>”);
 				<div class="col-lg-8">
 					<div class="contact-form-warp">
 						<h4 class="comment-title">Datos</h4>
-						<form  name="envio">
+						<form name="formC" class="comment-form">
 							<div class="row">
 								<div class="col-md-6">
 									<input type="text" name="email" placeholder="name@xyz.com" required/>
@@ -202,17 +197,17 @@ var canton_23=new Array("Ambato","Baños","Cevallos","Mocha","Patate","Quero","S
 var canton_24=new Array("Zamora","Centinela de Cóndor","Chinchipe","El Pangui","Nangaritza","Palanda","Paquicha","Yacuambi","Yantzaza");
 	function cambia_canton(){
 var provincia;
-   	provincia = document.envio.provincia[document.envio.provincia.selectedIndex].value;    
+   	provincia = document.formC.provincia[document.formC.provincia.selectedIndex].value;    
 	if (provincia != 0) { 
       	mis_cantones=eval("canton_" + provincia);
       	num_cantones = mis_cantones.length;
-      	document.envio.canton.length = num_cantones;
+      	document.formC.canton.length = num_cantones;
       	for(i=0;i<num_cantones;i++){ 
-         	document.envio.canton.options[i].value=mis_cantones[i];
-         	document.envio.canton.options[i].text=mis_cantones[i];
+         	document.formC.canton.options[i].value=mis_cantones[i];
+         	document.formC.canton.options[i].text=mis_cantones[i];
       	}
 	}
-		document.envio.canton.options[0].selected = true;
+		document.formC.canton.options[0].selected = true;
 	
 	}
 </script>
